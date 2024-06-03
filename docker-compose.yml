@@ -4,7 +4,7 @@ services:
     image: postgres:13
     restart: always
     environment:
-      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_PASSWORD: Password1234
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
     volumes:
@@ -18,7 +18,7 @@ services:
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:mysecretpassword@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
-      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_ADMIN_SECRET: Password1234
     depends_on:
       - postgres
 
